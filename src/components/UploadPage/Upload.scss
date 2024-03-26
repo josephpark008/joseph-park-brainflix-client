@@ -1,0 +1,147 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+//MOBILE
+.video-thumbnail__label,
+.video-title__label,
+.video-descript__label {
+  @include SH-m;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.video-descript__input,
+.video-title__input {
+  background: $Alabaster;
+  padding: 12px 0 12px 12px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.upload-section {
+  padding: 0 14px 0 14px;
+}
+
+.upload-header {
+  @include PG-m;
+  margin: 25px 0 25px 0;
+}
+
+.video-thumbnail {
+  margin-bottom: 10px;
+  &__thumbnail {
+    width: 100%;
+  }
+}
+
+.video-title {
+  margin-bottom: 15px;
+}
+
+.video-descript {
+  margin-bottom: 15px;
+
+  &__input {
+    padding-bottom: 60px;
+  }
+}
+
+.cancel-button {
+  margin: 30px 0 50px 0;
+  background-color: $White;
+  width: 100%;
+  padding: 10px;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  color: $BrainFlix-Blue;
+  border: none;
+  background-position: 0.5rem;
+  background-size: 20px;
+}
+
+//TABLET
+@include tablet {
+  .upload-section {
+    padding: 0 35px 0 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  .upload-header {
+    border-bottom: 1px solid $Mercury;
+    padding: 10px 0 25px 0;
+    @include PH-dt;
+  }
+
+  .video-thumbnail {
+    width: 50%;
+  }
+
+  .video-descript {
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $Mercury;
+  }
+  .buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .buttons {
+    width: 43%;
+    display: flex;
+    height: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .button-style {
+    order: 2;
+  }
+  .cancel-button {
+    margin: 0;
+    margin-right: 30px;
+    order: 1;
+    @include LB-dt;
+  }
+}
+
+//DESKTOP
+@include desktop {
+  .upload-section {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 100px 0 100px;
+  }
+
+  .upload-header {
+    width: 100%;
+  }
+  .video-thumbnail {
+    width: 28%;
+  }
+  .input-section {
+    width: 69.2%;
+    margin-left: 30px;
+  }
+  .video-title {
+    width: 100%;
+  }
+  .video-descript {
+    width: 100%;
+    border: none;
+    margin: 5px;
+    margin-left: 0;
+    &__input {
+      padding-bottom: 40px;
+    }
+  }
+  .buttons-container {
+    width: 100%;
+    border-top: 1px solid $Mercury;
+    padding-top: 20px;
+  }
+  .buttons {
+    width: 30%;
+  }
+}

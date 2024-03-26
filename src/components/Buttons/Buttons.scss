@@ -1,0 +1,19 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.action-button{
+background-color:$BrainFlix-Blue ;
+width: 100%;
+padding: 0.688rem;
+background-repeat: no-repeat;
+border-radius: 4px;
+color: $White;
+border: none;
+background-position: 0.5rem;
+background-size: 20px;
+@include LB-dt; 
+
+&:hover{
+background-color: $Brainflix-Darkblue;
+}
+}

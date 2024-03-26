@@ -1,0 +1,106 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.comment-section {
+  flex-direction: row;
+  padding-left: $padding-a-h;
+  padding-right: $padding-a-h;
+  flex-wrap: wrap;
+
+  &__amount {
+    width: 100%;
+    margin: 0;
+    margin-bottom: $padding-a-h;
+    @include BC-m;
+  }
+
+  &__avatar {
+    height: 36px;
+    width: 36px;
+    object-fit: cover;
+    border-radius: 100px;
+    margin-right: $padding-a-h;
+    margin-top: 20px;
+  }
+}
+
+.comment-make {
+  width: 80%;
+  margin-bottom: $padding-a-h;
+
+  &__header {
+    width: 100%;
+    @include SH-m;
+    margin: 0;
+    margin-bottom: 2px;
+  }
+
+  &__input {
+    background: $Alabaster;
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    &::placeholder {
+      color: $BrainFlix-Black;
+      font-family: sans-serif;
+      @include SH-m;
+    }
+  }
+}
+
+.action-button--COMMENT {
+  width: 100%;
+}
+
+//TABLET
+@include tablet {
+  .comment-section {
+    padding: 0 30px 0 30px;
+  }
+
+  .comment-make {
+    display: flex;
+    flex-wrap: wrap;
+    width: 92.5%;
+
+    &__header {
+      font-size: 0.688rem;
+    }
+    &__input {
+      width: 70%;
+      padding: 8px 0 0px 10px;
+      margin: 0 32px 0 0;
+    }
+  }
+  .action-button--COMMENT {
+    width: 25%;
+  }
+}
+
+//DESKTOP
+@include desktop {
+  .comment-section {
+    width: 92%;
+    padding: 0 0 0 100px;
+    &__avatar {
+      margin-right: 30px;
+    }
+  }
+
+  .comment-make {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    &__input {
+      width: 73%;
+      margin-right: 25px;
+    }
+  }
+  .action-button--COMMENT {
+    width: 23%;
+  }
+}

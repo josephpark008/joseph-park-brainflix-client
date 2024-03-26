@@ -1,0 +1,67 @@
+// MOBILE (m) TYPEKIT
+
+@mixin PG-m() {
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+@mixin SH-m() {
+  line-height: 1.25rem;
+  font-size: 0.75rem;
+}
+
+@mixin Sh-m() {
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+@mixin BC-m() {
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+@mixin LB-m() {
+  line-height: 1.25rem;
+  font-size: 0.625rem;
+}
+
+// DESKTOP AND TABLET (dt) TYPE KIT
+
+@mixin PH-dt() {
+  line-height: 2.75rem;
+  font-size: 2.0625rem;
+}
+
+@mixin SH-dt() {
+  line-height: 1.25rem;
+  font-size: 0.75rem;
+}
+
+@mixin Sh-dt() {
+  line-height: 1.375rem;
+  font-size: 0.875rem;
+}
+
+@mixin BC-dt() {
+  line-height: 1.375rem;
+  font-size: 0.875rem;
+}
+
+@mixin LB-dt() {
+  line-height: 1.25rem;
+  font-size: 0.75rem;
+}
+
+//BREAKPOINTS
+@mixin tablet() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+

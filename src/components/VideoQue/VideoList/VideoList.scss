@@ -1,0 +1,37 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+//MOBILE
+.video-list {
+  padding: 0 16px 0 16px;
+  margin-bottom: 40px;
+  &__header {
+    font-size: 0.75rem;
+    margin: 20px 0 20px 0;
+  }
+}
+
+//TABLET
+@include tablet {
+  .video-list {
+    width: 43%;
+    padding: 0;
+    margin-left: 30px;
+  }
+  .video-text {
+    width: 50%;
+  }
+}
+
+//DESKTOP
+@include desktop {
+  .video-list {
+    padding: 0 0 0 20px;
+    width: 24%;
+    border-left: 1px solid $Silver;
+
+    &__header {
+      margin-top: 35px;
+    }
+  }
+}

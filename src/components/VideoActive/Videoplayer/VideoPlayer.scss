@@ -1,0 +1,36 @@
+@use '../../../styles/partials/mixins' as *;
+@use '../../../styles/global.scss';
+@use '../../../styles/partials/variables' as *;
+
+//MOBILE
+.video-active {
+  padding: 0;
+  &__poster {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+//TABLET
+@include tablet {
+  .video-active {
+    width: 100%;
+    background-color: black;
+    &__poster {
+      width: 100%;
+      aspect-ratio: 2/1.03;
+      object-fit: contain;
+    }
+  }
+}
+
+//DESKTOP
+@include desktop {
+  .video-active {
+    background-color: black;
+    &__poster {
+      width: 100%;
+      aspect-ratio: 2/0.9;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+
+//INPUT ERROR BORDER STYLING (for validation)
+#root .input--error {
+  border-color: #d22d2d;
+  border-width: 1px;
+}
+
+//BORDER BOX STYLING
+.video-descript__input,
+.video-title__input,
+.comment-make__input,
+.nav__search {
+  border: solid 1px $Mercury;
+}
+
+//TOP BORDER STYLING
+.upload-section,
+.comment,
+.last-comment,
+.video-details {
+  border-top: 1px solid $Mercury;
+}
+
+.comment,
+.last-comment,
+.comments-details,
+.comment-section,
+.nav,
+.video-details,
+.video-numbers,
+.view-details,
+.likes-details,
+.video,
+.video-text {
+  display: flex;
+}
+
+//TEXT COLOUR BRAINFLIX-BLACK
+.comments-details__name,
+.comments-info,
+.comment-section__amount,
+.video-info__descript,
+.video-info__header,
+.posted-details,
+.video-text {
+  color: $BrainFlix-Black;
+}
+
+.video-thumbnail__label,
+.video-title__label,
+.video-list,
+.video-descript__label,
+.comments-details__date,
+.comment-make__header,
+.posted-details__date,
+.view-details__count,
+.video-list__header {
+  color: $Silver;
+}
+
+.video-thumbnail__label,
+.video-title__label,
+.video-descript__label,
+.comments-details__name,
+.comment-section__amount,
+.comment-make__header,
+.posted-details,
+.video-list__header {
+  font-weight: 600;
+}
